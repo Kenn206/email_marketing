@@ -2,12 +2,16 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Montserrat Alternates", Arial, Helvetica, sans-serif;
+    font-size: 16px;
 }
 .SunHomes__container {
     width: 600px;
     margin: 0 auto;
-    background-color: #f5f5f5;   
+    background-color: #f0f0f0; 
+    box-shadow: 0 0 20px rgb(199, 199, 199);
+    border-radius: 10px;
+    margin: 10px auto;
 }
 .SunHomes__main {
     display: flex;
@@ -19,8 +23,11 @@
     align-items: center;
     margin-top: 59px;
     margin-bottom: 10px;
-    font-weight: 700;
-    font-size: 15px;
+}
+.SunHomes__title span {
+    font-size: 1.1rem;
+    font-family: 'Pattaya', sans-serif;
+    font-weight: 400;
 }
 .SunHomes__banner img {
     border-radius: 10px;
@@ -28,13 +35,29 @@
 }
 .SunHomes__desp {
     width: 486px;
-    max-height: 108px;
-    margin: 20px 0;
-    font-size: 15px;
+    margin: 25px 0 5px 0;   
+    line-height: 25px;
+}
+.SunHomes__desp span {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
 }
 .SunHomes-uuDai__desp {
     display: flex;
     justify-content: space-between;
+    margin-top: 5px;
+}
+.gift {
+    animation: giftANM 1s infinite;
+}
+@keyframes giftANM {
+    0%, 100% {
+        transform: skewY(-1deg) scale(1.1);
+    }
+    50% {
+        transform: skewY(-1deg) scale(0.6)
+    }
 }
 .SunHomes-uuDai__desp .label_icon {
     display: flex;
@@ -60,6 +83,16 @@
     max-height: 75px;
     line-height: 30px;
 }
+
+@keyframes btnNhay {
+    0%, 100% {
+        transform: skewY(-1deg) scale(1);
+    }
+    50% {
+        transform: skewY(1deg) scale(1.2);
+    }
+}
+
 .btn__datban {
     margin-bottom: 20px;
     width: 178px;
@@ -71,6 +104,7 @@
     border: none;
     border-radius: 8px;
     transition: all 0.3s ease;
+    animation: btnNhay 1.2s infinite;
 }
 .btn__datban:hover {
     transform: translateY(-8px);
@@ -82,6 +116,8 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
+    padding-bottom: 50px;
+    flex-wrap: wrap;
 }
 .SunHomes__footer .footer-left {
     flex: 5;
